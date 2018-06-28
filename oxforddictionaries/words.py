@@ -1,6 +1,6 @@
-from api import API
+from .api import API
 
-class Oxford(API):
+class OxfordDictionaries(API):
 
     def __init__(self, app_id, app_key, format_='json', language='en', timeout=5, sleep_time=1.5):
         super().__init__(app_id, app_key, language, timeout, sleep_time)
@@ -10,8 +10,11 @@ class Oxford(API):
         """
             Get synonyms for chosen word.
         """
-        path = "{}/synonyms".format(word.lower())
-        return self._make_request(path)
+        try:
+            path = "{}/synonyms".format(word.lower())
+            return self._make_request(path)
+        except:
+            return "No synonyms for {} in our current dictionaries.".format(word)
 
     def get_antonyms(self, word):
         """
@@ -21,7 +24,7 @@ class Oxford(API):
             path = "{}/antonyms".format(word.lower())
             return self._make_request(path)
         except:
-            return "No antonyms for {}".format(word)
+            return "No antonyms for {} in our current dictionaries.".format(word)
     
     def get_info_about_word(self, word):
         """
@@ -32,12 +35,12 @@ class Oxford(API):
         return self._make_request(path)
 
 
-o = Oxford('438eaf0a', 'a19c0ea86179f5be927cf61ac4a391b1')
+# o = Oxford('438eaf0a', 'a19c0ea86179f5be927cf61ac4a391b1')
 
-# print(o.get_info_about_word("book"))
-relax = o.get_synonyms("absorb").json()
+# # print(o.get_info_about_word("book"))
+# relax = o.get_synonyms("absorb").json()
 
-synonyms = relax['results'][0]['lexicalEntries'][0]['entries'][0]['senses'][0]['synonyms']
+# synonyms = relax['results'][0]['lexicalEntries'][0]['entries'][0]['senses'][0]['synonyms']
 
-for s in range(10):
-    print(synonyms[s]['text'])
+# for s in range(10):
+#     print(synonyms[s]['text'])
