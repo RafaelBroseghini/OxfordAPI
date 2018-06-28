@@ -8,7 +8,8 @@ The Oxford API offers a free plan with up to 2,000 requests per month, although 
 
 # Usage
 ```python
-o = Oxford(app_id, app_key)
+from oxford import OxfordDictionaries
+o = OxfordDictionaries.Oxford(app_id, app_key)
 
 #print(o.get_info_about_word("book"))
 relax = o.get_synonyms("absorb").json()
