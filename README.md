@@ -7,6 +7,7 @@ The Oxford API offers a free plan with up to 2,000 requests per month, although 
 `pass`
 
 # Usage
+The code below shows how to quickly get 10 synonyms for a chosen word.
 ```python
 from oxford import OxfordDictionaries
 o = OxfordDictionaries.Oxford(app_id, app_key)
