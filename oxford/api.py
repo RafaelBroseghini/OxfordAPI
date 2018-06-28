@@ -12,7 +12,7 @@ class API(object):
         assert app_key != "", "Non empty app_key"
 
         # Oxford requires that keys in the header dictionary are called app*, 
-        # therefore I chose to call API members accordingly. Sorry if this is confusing.
+        # therefore I chose to call API object members accordingly. Sorry if this is confusing.
 
         self.headers = {'app_id': app_id,'app_key': app_key}
         self._LANGUAGE = language
@@ -27,4 +27,4 @@ class API(object):
                                         full_uri,
                                         timeout=self.timeout,
                                         headers=self.headers)
-        return json.loads(response.text)
+        return response
