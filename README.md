@@ -18,4 +18,13 @@ relax = o.get_synonyms("absorb").json()
 synonyms = relax['results'][0]['lexicalEntries'][0]['entries'][0]['senses'][0]['synonyms']
 
 for s in range(10):
-    print(synonyms[s]['text'])```
+    print(synonyms[s]['text'])
+```
+
+# Contributing
+
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :+1:
