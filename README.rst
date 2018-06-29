@@ -13,8 +13,11 @@ Installation
 Usage
 =======
 The code below shows how to quickly get 10 synonyms for a chosen word.
-```python
+.. code-block: python
+    :linenos:
+    :emphasize-lines: 1,2,3
 from oxforddictionaries.words import OxfordDictionaries
+
 o = OxfordDictionaries.Oxford(app_id, app_key)
 
 relax = o.get_synonyms("absorb").json()
@@ -23,7 +26,6 @@ synonyms = relax['results'][0]['lexicalEntries'][0]['entries'][0]['senses'][0]['
 
 for s in range(10):
     print(synonyms[s]['text'])
-```
 
 Contributing
 ============
