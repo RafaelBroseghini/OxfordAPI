@@ -15,7 +15,6 @@ Usage
 The code below shows how to quickly get 10 synonyms for a chosen word.
 
 .. code-block:: python
-   :linenos:
 
     from oxforddictionaries.words import OxfordDictionaries
 
