@@ -1,4 +1,4 @@
-from .api import API
+from api import API
 
 class OxfordDictionaries(API):
 
@@ -26,6 +26,15 @@ class OxfordDictionaries(API):
         except:
             return "No antonyms for {} in our current dictionaries.".format(word)
     
+    def translate(self, word, target_language='es'):
+        """
+            Get Translation for word from source language
+            to target language. Spanish default.
+        """
+
+        path = "{}/translations={}".format(word.lower(), target_language)
+        return self._make_request(path)
+
     def get_info_about_word(self, word):
         """
             Get dictionary information for chosen word.
@@ -34,13 +43,10 @@ class OxfordDictionaries(API):
         path = "{}".format(word.lower())
         return self._make_request(path)
 
+    def use_in_sentence(self, word):
+        """
+            Examples of how to use word in sentence.
+        """
 
-# o = Oxford('438eaf0a', 'a19c0ea86179f5be927cf61ac4a391b1')
-
-# # print(o.get_info_about_word("book"))
-# relax = o.get_synonyms("absorb").json()
-
-# synonyms = relax['results'][0]['lexicalEntries'][0]['entries'][0]['senses'][0]['synonyms']
-
-# for s in range(10):
-#     print(synonyms[s]['text'])
+        path = "{}/sentences".format(word.lower())
+        return self._make_request(path)
