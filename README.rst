@@ -18,7 +18,7 @@ The code below shows how to quickly get 10 synonyms for a chosen word.
 
     from oxforddictionaries.words import OxfordDictionaries
 
-    o = OxfordDictionaries.Oxford(app_id, app_key)
+    o = OxfordDictionaries(app_id, app_key)
 
     relax = o.get_synonyms("absorb").json()
 
