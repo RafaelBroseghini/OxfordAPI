@@ -1,7 +1,7 @@
 # Oxford Dictionary API Python Wrapper
 
-This is a python wrapper for the Oxford Dictionary API.
-The Oxford API offers a free plan with up to 3,000 requests per month with ull access to Oxford Dictionaries data, although you will need to register for an API key. Sign up [here](https://developer.oxforddictionaries.com/).
+This is a python wrapper around the Oxford Dictionary API.
+The Oxford API offers a free plan with up to 3,000 requests per month with full access to Oxford Dictionaries data, although you will need to register for an API key. Sign up [here](https://developer.oxforddictionaries.com/).
 
 ## Installation
 
