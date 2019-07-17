@@ -10,6 +10,7 @@ class OxfordDictionaries(API):
         """
             Get synonyms for chosen word.
         """
+        
         try:
             path = "{}/synonyms".format(word.lower())
             return self._make_request(path)
@@ -20,6 +21,7 @@ class OxfordDictionaries(API):
         """
             Get antonyms for chosen word.
         """
+
         try:
             path = "{}/antonyms".format(word.lower())
             return self._make_request(path)
