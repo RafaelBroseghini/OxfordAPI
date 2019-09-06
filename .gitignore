@@ -7,5 +7,6 @@
 *.pypirc
 
 #dirs
+env/
 build/
 dist/

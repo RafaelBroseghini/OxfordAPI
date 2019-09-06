@@ -1,5 +1,5 @@
 import unittest
-from words import OxfordDictionaries
+from .words import OxfordDictionaries
 
 class API_Tester(unittest.TestCase):
     def setUp(self):
