@@ -12,8 +12,8 @@ class OxfordApiV2(OxfordApi):
             request_timeout_milliseconds=10000,
             request_interval_milliseconds=300):
 
-        assert application_id != "", "Non empty app_id"
-        assert application_key != "", "Non empty app_key"
+        assert application_id != "", "Empty application_id"
+        assert application_key != "", "Empty application_key"
 
         self.application_id = application_id
         self.application_key = application_key
@@ -27,10 +27,10 @@ class OxfordApiV2(OxfordApi):
         self.session = requests.Session()
         self.session.headers = {'application': 'PythonWrapper'}
 
-    def send_request(self, lang, path, method='GET'):
+    def send_request(self, path, method='GET'):
         """Make a GET request to the API"""
-        time.sleep(self.request_interval_milliseconds)
-        full_uri = self.api_root + '/' + lang + '/' + path
+        time.sleep(self.request_interval_milliseconds / 1000)
+        full_uri = self.api_root + '/' + path
         response = self.session.request(
             method,
             full_uri,
@@ -38,3 +38,8 @@ class OxfordApiV2(OxfordApi):
             headers=self.headers)
 
         return response
+
+    def get_entries(self, lang, word):
+        path = f'entries/{lang}/{word.lower()}?fields=definitions&strictMatch=false'
+        return self.send_request(path)
+
