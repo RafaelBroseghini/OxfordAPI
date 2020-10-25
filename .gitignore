@@ -14,5 +14,6 @@
 env/
 build/
 dist/
+.idea
 
 *credentials.py
