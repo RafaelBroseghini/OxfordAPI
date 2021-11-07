@@ -21,8 +21,6 @@ class OxfordApiV2(OxfordApi):
         self.request_interval_milliseconds = request_interval_milliseconds
         self.api_root = 'https://od-api.oxforddictionaries.com/api/v2'
 
-        # Oxford requires that keys in the header dictionary are called app*,
-        # therefore I chose to call API object members accordingly. Sorry if this is confusing.
         self.headers = {'app_id': application_id, 'app_key': application_key}
         self.session = requests.Session()
         self.session.headers = {'application': 'PythonWrapper'}
