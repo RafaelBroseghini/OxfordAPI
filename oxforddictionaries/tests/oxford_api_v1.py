@@ -1,9 +1,12 @@
 import unittest
-from words import OxfordDictionaries
 
-class API_Tester(unittest.TestCase):
+from credentials import APPLICATION_ID, APPLICATION_KEY
+from oxford_api_v1 import OxfordApiV1
+
+
+class OxfordApiV1Tests(unittest.TestCase):
     def setUp(self):
-        self.oxford = OxfordDictionaries(app_id, app_key)
+        self.oxford = OxfordApiV1(APPLICATION_ID, APPLICATION_KEY)
 
     def test_synonyms(self):
         self.assertEqual(self.oxford.get_synonyms("play").status_code, 200)
@@ -20,7 +23,6 @@ class API_Tester(unittest.TestCase):
     def test_antonyms(self):
         self.assertEqual(self.oxford.use_in_sentence("play").status_code, 200)
 
+
 if __name__ == '__main__':
     unittest.main()
-        
-        
