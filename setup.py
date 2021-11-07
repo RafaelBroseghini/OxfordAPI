@@ -16,7 +16,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/RafaelBroseghini/OxfordAPI",
     author="Rafael Broseghini",
-    author_email="rafaellopesbroseghini@gmail.com",
+    author_email="dummyemail@gmail.com",
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
