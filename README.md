@@ -1,40 +1,28 @@
 # Oxford Dictionary API Python Wrapper
 
-This is a python wrapper around the Oxford Dictionary API.
-The Oxford API offers a free plan with up to 3,000 requests per month with full access to Oxford Dictionaries data, although you will need to register for an API key. Sign up [here](https://developer.oxforddictionaries.com/).
+This is a python wrapper around the [Oxford Dictionary API](https://developer.oxforddictionaries.com/).
 
-In addition to the API wrapper a caching structure is provided for requesting entries from APIv2 and persisting the results such that the API is not queried multiple times for the already checked word.
+## Getting your App Key and ID
+
+To get your App Key and ID, please follow the [Getting Started](https://developer.oxforddictionaries.com/documentation/getting_started) guide.
 
 ## Installation
 
-* `git clone git@github.com:RafaelBroseghini/OxfordAPI.git`
-* `cd OxfordAPI`
-* `python OxfordDictionaries.py`
-
+`pip install oxforddictionaries`
 
 ## Usage
 
-The code below shows how to query APIv2 for definitions of word 'staple'.
-
-
-
 ```python
-from oxforddictionaries.caching_language_dictionary import CachingLanguageDictionary
-from oxforddictionaries.credentials import APPLICATION_ID, APPLICATION_KEY
-from oxforddictionaries.oxford_api_v2 import OxfordApiV2
+from oxforddictionaries import OxfordApi
+
+async def main():
+  oxford_api = OxfordApi("<app_id>", "<app_key>")
+  print(await oxford_api.get_entries("word"))
 
 if __name__ == "__main__":
-    oxford_api = OxfordApiV2(APPLICATION_ID, APPLICATION_KEY)
-    caching_language_dictionary = CachingLanguageDictionary(oxford_api, 'en-gb')
-    result = caching_language_dictionary.get_definitions("staple")
-    print(result)
+    asyncio.run(main())
 ```
-Note: before using it you need to create python file credentials.py in oxforddictionaries directory of the following structure:
-```python
-# this file is part of git ignore, replace with your API credentials
-APPLICATION_ID = ""
-APPLICATION_KEY = ""
-```
+
 ## Contributing
 
 1. Fork it! :+1:
