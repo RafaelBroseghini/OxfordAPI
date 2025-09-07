@@ -1,0 +1,9 @@
+[project]
+name = "oxforddictionaries"
+version = "0.2.0"
+description = "Explore the Oxford dictionary API."
+readme = "README.md"
+requires-python = ">=3.11.0"
+dependencies = [
+    "httpx>=0.28.1",
+]
