@@ -1,7 +1,7 @@
 import httpx
 
 
-class OxfordApi:
+class Client:
     SANDBOX_API_ROOT = "https://od-api-sandbox.oxforddictionaries.com/api/v2"
     PRODUCTION_API_ROOT = "https://od-api.oxforddictionaries.com/api/v2"
 

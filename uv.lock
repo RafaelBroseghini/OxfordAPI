@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.11.0"
 
 [[package]]
@@ -72,8 +72,8 @@ wheels = [
 ]
 
 [[package]]
-name = "oxforddictionaries"
-version = "0.2.0"
+name = "oxfordapi"
+version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "httpx" },

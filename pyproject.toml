@@ -1,7 +1,7 @@
 [project]
-name = "oxforddictionaries"
-version = "0.2.0"
-description = "Explore the Oxford dictionary API."
+name = "oxfordapi"
+version = "0.1.0"
+description = "Explore the Oxford dictionaries API."
 readme = "README.md"
 requires-python = ">=3.11.0"
 dependencies = [
