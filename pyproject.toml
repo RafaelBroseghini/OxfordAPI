@@ -7,3 +7,16 @@ requires-python = ">=3.11.0"
 dependencies = [
     "httpx>=0.28.1",
 ]
+keywords = ["oxford", "dictionary", "api", "oxfordapi", "oxford-api"]
+authors = [
+    { name = "Rafael Broseghini" },
+]
+maintainers = [
+    { name = "Rafael Broseghini" },
+]
+license = "MIT"
+
+[project.urls]
+"Homepage" = "https://github.com/rafaelbroseghini/oxfordapi"
+"Repository" = "https://github.com/rafaelbroseghini/oxfordapi"
+"Documentation" = "https://github.com/rafaelbroseghini/oxfordapi/blob/main/README.md"
