@@ -1,5 +1,5 @@
 > [!CAUTION]
-> This project has moved to [pip install oxfordapi](https://pypi.org/project/oxfordapi/)
+> This project has moved from [pip install oxforddictionaries](https://pypi.org/project/oxforddictionaries/) to [pip install oxfordapi](https://pypi.org/project/oxfordapi/)
 
 # Oxford Dictionary API Python Wrapper
 
